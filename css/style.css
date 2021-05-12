@@ -1,3 +1,8 @@
+.call__title {
+  font-family: 'Roboto-Medium';
+  font-weight: 500;
+}
+
 @font-face {
   font-family: 'Roboto-Regular';
   font-weight: 400;
@@ -62,6 +67,11 @@ ul, li {
 
 button {
   padding: 0;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
 }
 
 body {
@@ -149,7 +159,6 @@ body {
   background-color: #fff;
   border: none;
   position: relative;
-  cursor: pointer;
 }
 
 .menu__btn::after {
@@ -276,7 +285,6 @@ body {
     border: none;
     border-radius: 3px;
     background-color: #2B4074;
-    cursor: pointer;
   }
   .top-slider .slick-dots {
     bottom: 50px;
@@ -356,6 +364,7 @@ body {
     font-size: 84px;
     line-height: 84px;
     letter-spacing: 2px;
+    max-width: 750px;
   }
   .top-slider__paragraph {
     padding: 29px 0 12px;
@@ -405,6 +414,77 @@ body {
   .top-slider .slick-next {
     background-color: #F9F6E5;
     bottom: calc(50% - 70px);
+  }
+}
+
+.call {
+  padding: 40px 0;
+  background-color: #2B4074;
+  text-align: center;
+  color: #fff;
+}
+
+.call__title {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.call__text {
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.call__btn {
+  padding: 16px;
+  text-transform: uppercase;
+  color: #2B4074;
+  background-color: #F9F6E5;
+  font-family: 'Roboto-Medium';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  border: none;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .call {
+    text-align: left;
+  }
+  .call__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .call__box {
+    max-width: 427px;
+  }
+  .call__text {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .call__box {
+    max-width: 601px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .call__inner {
+    padding: 0 80px;
+  }
+  .call__box {
+    max-width: 601px;
   }
 }
 /*# sourceMappingURL=style.css.map */
