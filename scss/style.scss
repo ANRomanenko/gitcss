@@ -671,15 +671,49 @@
 .project {
     padding: 20px 0 40px;
     text-align: center;
-    background: -webkit-linear-gradient(180deg, rgb(43, 64, 116), rgb(255, 255, 255));
-    background: -moz-linear-gradient(180deg, rgb(43, 64, 116), rgb(255, 255, 255));
-    background: linear-gradient(180deg, rgb(43, 64, 116), rgb(255, 255, 255));
+    background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
     &__title {
+        margin-bottom: 40px;
         color: #fff;
-        font-family: 'RobotoCondensed-Regular';
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 28px;
         letter-spacing: 0;
+        &::after {
+            background-color: #fff;
+        }
+    }
+    &__item-img {
+        min-height: 250px;
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        // background-size: cover;
+    }
+    &__item-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background-color: rgba($bg_color, .83);
+        width: 253px;
+        height: 226px;
+        // margin: 20px auto;
+
+    }
+    &__item-link {
+        display: block;
+        padding: 20px 0;
+        color: $accent;
+        font-family: 'RobotoCondensed-Bold';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2px;
+    }
+}
+
+.team {
+    text-align: center;
+    &__images {
+        min-height: 250px;
+        width: 280px;
     }
 }
