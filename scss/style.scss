@@ -683,9 +683,15 @@
     &__item-img {
         min-height: 250px;
         border-radius: 4px;
+        background-position: center;
         background-repeat: no-repeat;
-        background-position: center center;
-        // background-size: cover;
+        background-size: cover;
+        padding: 14px 12px;
+        &:hover {
+            .project__item-inner{
+                opacity: 1;
+            }
+        }
     }
     &__item-inner {
         display: flex;
@@ -693,10 +699,13 @@
         align-items: center;
         border-radius: 4px;
         background-color: rgba($bg_color, .83);
-        width: 253px;
-        height: 226px;
-        // margin: 20px auto;
-
+        min-height: 227px;
+        opacity: 0;
+        transition: all .5s;
+    }
+    &__item-info,
+    &__item-search {
+        margin: 0 7px;
     }
     &__item-link {
         display: block;
@@ -711,9 +720,163 @@
 }
 
 .team {
+    padding: 0 0 40px;
     text-align: center;
     &__images {
-        min-height: 250px;
-        width: 280px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    &__title {
+        margin-bottom: 23px;
+        line-height: 38px;
+        letter-spacing: 0;
+        color: $text-color;
+    }
+    &__text {
+        margin-bottom: 84px;
+        font-family: 'Roboto-Regular';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    &__btn {
+        padding: 21px 26px;
+        border: none;
+        color:$bg_color;
+        background-color: $accent;
+        border-radius: 3px;
+        font-family: 'Roboto-Medium';
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 18px;
+    }
+}
+
+@media (min-width: 640px ) {
+    .project {
+        padding: 40px 0 40px;
+        text-align: center;
+        background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
+        &__title {
+            // font-size: 48px;
+            // line-height: 56px;
+            padding-bottom: 28px;
+            margin-bottom: 40px;
+
+            &::after {
+                background-color: #fff;
+                display: block;
+                width: 100px;
+            }
+        }
+        &__item-img {
+            min-height: 460px;
+            padding: 21px 24px;
+        }
+        &__item-inner {
+            min-height: 417px;
+        }
+        &__item-link {
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+    
+    .team {
+        padding: 0 0 40px;
+        text-align: center;
+        &__images {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+        &__title {
+            padding-bottom: 28px;
+            margin-bottom: 40px;
+            font-size: 36px;
+            line-height: 38px;
+            letter-spacing: 0;
+            color: $text-color;
+            &::after {
+                display: block;
+                width: 100px;
+            }
+        }
+        &__text {
+            margin-bottom: 56px;
+        }
+    }
+}
+
+@media (min-width: 768px ) {
+    .project {
+        padding: 80px 0 60px;
+        text-align: center;
+        background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
+        &__title {
+            // font-size: 48px;
+            // line-height: 56px;
+            padding-bottom: 28px;
+            margin-bottom: 40px;
+
+            &::after {
+                background-color: #fff;
+                display: block;
+                width: 100px;
+            }
+        }
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__item-img {
+            min-height: 283px;
+            width: 317px;
+            padding: 14px;
+        }
+        &__item-inner {
+            min-height: 256px;
+        }
+        &__item-link {
+            padding: 30px 0;
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+    
+    .team {
+        padding: 0 0 40px;
+        text-align: center;
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__images {
+            margin: 0 37px 40px 0;
+            width: 39%;
+            border-radius: 4px;
+
+        }
+
+        &__title {
+            text-align: left;
+            padding-bottom: 28px;
+            margin-bottom: 7px;
+            font-size: 36px;
+            line-height: 38px;
+            letter-spacing: 0;
+            color: $text-color;
+            &::after {
+                display: block;
+                width: 100px;
+                margin: 0;
+            }
+        }
+        &__text {
+            font-size: 18px;
+            text-align: left;
+            margin-bottom: 56px;
+        }
     }
 }
