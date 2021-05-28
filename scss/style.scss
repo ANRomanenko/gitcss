@@ -815,8 +815,8 @@
         &__title {
             // font-size: 48px;
             // line-height: 56px;
-            padding-bottom: 28px;
-            margin-bottom: 40px;
+            padding-bottom: 32px;
+            margin-bottom: 80px;
 
             &::after {
                 background-color: #fff;
@@ -846,15 +846,16 @@
     
     .team {
         padding: 0 0 40px;
-        text-align: center;
+        text-align: left;
         &__inner {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            // justify-content: space-between;
+            // align-items: center;
         }
         &__images {
             margin: 0 37px 40px 0;
-            width: 39%;
+            width: 240px;
+            height: 100%;
             border-radius: 4px;
 
         }
@@ -875,8 +876,114 @@
         }
         &__text {
             font-size: 18px;
+            line-height: 18px;
             text-align: left;
             margin-bottom: 56px;
+        }
+        &__btn {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 1024px ) {
+    .project {
+        padding: 80px 0 60px;
+        text-align: center;
+        background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
+        &__items {
+            justify-content: center;
+        }
+        &__item-img {
+            margin: 0 12px;
+        }
+    }
+    
+    .team {
+        padding: 80px 0;
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__images {
+            margin: 0 37px 0 0;
+            width: 395px;
+            height: 100%;
+            border-radius: 4px;
+
+        }
+
+        &__title {
+            text-align: left;
+            padding-bottom: 28px;
+            margin-bottom: 20px;
+            font-size: 48px;
+            line-height: 56px;
+            letter-spacing: 0;
+            color: $text-color;
+            &::after {
+                display: block;
+                width: 100px;
+                margin: 0;
+            }
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: 1440px ) {
+    .project {
+        padding: 80px 0 60px;
+        &__items {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+        &__item-img {
+            width: 300px;
+        }
+    }
+    
+    .team {
+        padding: 50px 0 100px;
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__images {
+            margin-right: 100px;
+            width: 470px;
+            height: 100%;
+            border-radius: 4px;
+
+        }
+
+        &__title {
+            text-align: left;
+            padding-bottom: 38px;
+            margin-bottom: 40px;
+            font-size: 48px;
+            line-height: 56x;
+            letter-spacing: 0;
+            color: $text-color;
+            &::after {
+                display: block;
+                width: 100px;
+                margin: 0;
+            }
+        }
+        &__text {
+            font-size: 18px;
+            text-align: left;
+            line-height: 24px;
+            margin-bottom: 39px;
+        }
+        &__btn {
+            padding: 21px 35px;
         }
     }
 }
